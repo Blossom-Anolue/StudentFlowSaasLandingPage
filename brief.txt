@@ -1,0 +1,237 @@
+==============================================================
+SITE: StudentFlow
+==============================================================
+
+ROLE / CONTEXT
+--------------
+Role: You are the creative director for a modern SaaS landing page.
+Context: Build a polished landing page for StudentFlow, a software platform that helps students manage class schedules, assignments, study sessions, deadlines, and academic planning in one place. The site should feel modern, credible, clean, student-friendly, and startup-ready.
+
+BUILD STACK
+-----------
+1. Stitch (layout generation) — REQUIRED
+2. UI UX Pro Max (style / palette / typography selection)
+3. Firecrawl (reference scrape) — REQUIRED
+4. Magic / 21st.dev (hero enhancement) — OPTIONAL BUT PREFERRED
+5. Nano Banana 2 (optional imagery if available)
+6. Brand skill
+7. Design skill
+8. Design System skill
+9. UI Styling skill
+
+PURPOSE
+-------
+A SaaS landing page for StudentFlow, a student productivity and scheduling platform that helps students stay organized, manage workload, and plan their academic life more effectively.
+
+==============================================================
+STEP 2 — BRAND VOICE
+==============================================================
+
+Voice archetype: Clear Guide + Productive Mentor
+
+Tone dimensions (scale 1–5):
+- Formal ↔ Casual:        3
+- Serious ↔ Playful:      3
+- Reserved ↔ Expressive:  3
+- Modern ↔ Timeless:      5
+
+Voice rules:
+- Clear, polished, and easy to understand
+- Modern startup tone
+- Helpful and confident
+- Student-centered, not childish
+- Avoid heavy buzzwords and corporate filler
+- Focus on clarity, organization, and reducing stress
+
+Messaging framework:
+- Tagline (≤7 words):        "Stay organized. Stress less. Achieve more."
+- Value prop (≤20 words):    "A student planning platform for schedules, deadlines, study sessions, and smarter academic organization."
+- Key phrases (3–5):
+  "Plan your semester"
+  "Track deadlines with ease"
+  "Stay ahead of assignments"
+  "Smarter scheduling for students"
+  "One dashboard for student life"
+
+==============================================================
+STEP 3 — DESIGN SYSTEM
+==============================================================
+
+Style keywords:
+modern SaaS, clean, productive, polished, startup, student-focused, minimal, friendly, organized, soft gradients
+
+Preferred style direction:
+A polished startup-style SaaS landing page with clean spacing, modern cards, smooth section transitions, and subtle product-focused visuals.
+
+COLOR SYSTEM
+------------
+- Primary:         soft purple
+- Secondary:       dark pink accent
+- Accent:          light lavender / blush
+- Surface-base:    white
+- Surface-raised:  very light gray or soft lavender tint
+- Ink:             charcoal / dark slate
+- Success/info:    cool blue / green if needed
+
+Contrast requirement:
+WCAG AA minimum
+
+TYPOGRAPHY
+----------
+- Strong modern heading font
+- Clean sans-serif body font
+- Professional and readable
+- No decorative/game/pixel styling
+
+==============================================================
+STEP 4 — REFERENCE SCRAPE (for Firecrawl)
+==============================================================
+
+Reference URL: https://www.hisawyer.com/for-business?utm_medium=cpc&utm_source=microsoft_paid&utm_campaign=WS-Tools-NB-Scheduling&utm_content=software-student&utm_term=software%20for%20student%20scheduling&msclkid=73a628d651ea172affe341383c52766b
+
+Borrow:
+- section structure
+- product marketing flow
+- CTA placement
+- trust-building layout
+- feature explanation rhythm
+
+Avoid:
+- copying exact branding, wording, or visuals
+- anything too playful or childish
+- anything that doesn’t fit a student productivity SaaS
+
+==============================================================
+STEP 5 — SECTIONS & LAYOUT (for Stitch)
+==============================================================
+
+Stitch is required for layout generation in this build.
+Do not skip per-screen Stitch generation due to latency unless Stitch is fully unavailable.
+Prefer generating major sections with Stitch even if slower.
+If needed, generate sections sequentially instead of in parallel.
+
+Use Stitch to generate these sections:
+
+1. Hero
+- Product name: StudentFlow
+- Heading: Organize your academic life in one place
+- Subheading: Manage schedules, assignments, study time, and deadlines with a student-first productivity platform
+- CTA buttons:
+  Start Free
+  View Demo
+- Visual direction:
+  modern SaaS hero with dashboard preview, student productivity UI, calendar/task widgets
+
+2. Problem / Solution
+- Show how students struggle with scattered tools, missed deadlines, and overwhelming schedules
+- Present StudentFlow as the all-in-one solution
+
+3. Features
+- Smart schedule planner
+- Assignment and deadline tracker
+- Study session planning
+- Calendar integration
+- Team or study group collaboration
+- Reminder notifications
+- Workload overview dashboard
+
+4. Product Preview
+- Dashboard mockup
+- Calendar cards
+- Assignment timeline
+- Weekly workload chart
+
+5. How It Works
+- Add classes and deadlines
+- Build study plans
+- Track progress
+- Stay ahead
+
+6. Testimonials
+- Student-focused testimonials
+- Friendly but believable
+
+7. Pricing
+- Free plan
+- Pro student plan
+- Team / campus plan
+
+8. FAQ
+- Common questions about scheduling, reminders, integrations, and pricing
+
+9. Final CTA
+- Encourage sign-up or demo request
+
+10. Footer
+- Links, socials, terms, contact
+
+==============================================================
+STEP 5B — HERO BLOCK (for Magic / 21st.dev)
+==============================================================
+
+21st.dev hero prompt:
+A polished SaaS landing page hero for a student productivity platform called StudentFlow. Include a modern heading, short subheading, two CTA buttons, and a dashboard-style product preview with calendar, task cards, and academic planner widgets. Use a clean white background with soft purple and dark pink accents, rounded cards, subtle gradients, and a professional startup feel.
+
+Magic / 21st.dev should be used for the hero section unless unavailable.
+
+==============================================================
+STEP 6 — IMAGERY
+==============================================================
+
+Global art direction:
+modern SaaS product visuals, dashboard UI previews, organized student workflow, polished interface cards, subtle gradient illustrations
+
+Do not use random corporate stock people photos unless absolutely necessary.
+Prefer product mockups, dashboards, UI cards, and clean illustrations.
+
+==============================================================
+STEP 7 — BRAND ASSETS
+==============================================================
+
+Logo brief:
+- Wordmark: StudentFlow
+- Style: modern, clean, student-friendly, startup-ready
+- Optional icon ideas:
+  calendar + checkmark
+  flowing timeline
+  planner grid
+  academic dashboard symbol
+
+==============================================================
+STEP 8 — INTERACTIVE COMPONENTS
+==============================================================
+
+Use:
+- pricing cards
+- FAQ accordion
+- feature cards
+- dashboard preview cards
+- CTA buttons
+- testimonial slider if helpful
+
+==============================================================
+STEP 9 — ASSEMBLE & ANIMATE
+==============================================================
+
+Responsive breakpoints:
+mobile-first, tablet, desktop
+
+Accessibility:
+- visible labels
+- semantic landmarks
+- keyboard-friendly
+- alt text where needed
+- prefers-reduced-motion honored
+
+Animation:
+- hero fade and rise
+- scroll reveal
+- card hover lift
+- subtle CTA interactions
+- smooth modern transitions
+
+OUTPUT
+------
+Save final website as index3.html.
+Also generate build-report-3.json.
+Do not overwrite index.html or build-report.json.

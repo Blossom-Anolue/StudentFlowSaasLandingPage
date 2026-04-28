@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="StudentFlow — Stay organized. Stress less. Achieve more.">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#F5F1FF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#5E39E0"/>
+      <stop offset="1" stop-color="#7C5CFF"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.85" cy="0.15" r="0.6">
+      <stop offset="0" stop-color="#7C5CFF" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#7C5CFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.10" cy="0.85" r="0.6">
+      <stop offset="0" stop-color="#E14B8A" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#E14B8A" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+  <g transform="translate(72,72)">
+    <rect width="44" height="44" rx="12" fill="#7C5CFF"/>
+    <path d="M12 22 L18 28 L32 14" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="60" y="30" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="800" fill="#1B1B24" letter-spacing="-0.01em">StudentFlow</text>
+  </g>
+  <text x="72" y="280" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="url(#title)" letter-spacing="-0.03em">Organize your</text>
+  <text x="72" y="360" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="#1B1B24" letter-spacing="-0.03em">academic life.</text>
+  <text x="72" y="430" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="500" fill="#484555" letter-spacing="-0.005em">Schedules, assignments, study time, and deadlines —</text>
+  <text x="72" y="466" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="500" fill="#484555" letter-spacing="-0.005em">all in one student-first dashboard.</text>
+  <g transform="translate(820,170)">
+    <rect width="320" height="290" rx="22" fill="#FFFFFF" stroke="#E6DEFF" stroke-width="1.5" filter="url(#soft)"/>
+    <rect x="20" y="22" width="120" height="14" rx="4" fill="#1B1B24"/>
+    <rect x="20" y="44" width="80" height="10" rx="3" fill="#9590A6"/>
+    <g transform="translate(20,72)">
+      <rect width="56" height="60" rx="8" fill="#F0ECFA"/>
+      <rect x="0" y="0" width="6" height="60" rx="2" fill="#7C5CFF"/>
+      <rect x="64" y="0" width="56" height="42" rx="8" fill="#F0ECFA"/>
+      <rect x="64" y="0" width="6" height="42" rx="2" fill="#E14B8A"/>
+      <rect x="128" y="0" width="56" height="78" rx="8" fill="#F0ECFA"/>
+      <rect x="128" y="0" width="6" height="78" rx="2" fill="#7C5CFF"/>
+      <rect x="192" y="0" width="56" height="50" rx="8" fill="#F0ECFA"/>
+      <rect x="192" y="0" width="6" height="50" rx="2" fill="#FFB780"/>
+    </g>
+    <g transform="translate(20,170)">
+      <rect width="280" height="36" rx="10" fill="#FAF7FF"/>
+      <circle cx="18" cy="18" r="4" fill="#E14B8A"/>
+      <rect x="34" y="11" width="120" height="6" rx="2" fill="#1B1B24"/>
+      <rect x="34" y="22" width="70" height="5" rx="2" fill="#9590A6"/>
+      <rect x="220" y="13" width="46" height="14" rx="7" fill="#FFE0EC"/>
+      <rect width="280" height="36" rx="10" fill="#FAF7FF" y="44"/>
+      <circle cx="18" cy="62" r="4" fill="#7C5CFF"/>
+      <rect x="34" y="55" width="140" height="6" rx="2" fill="#1B1B24"/>
+      <rect x="34" y="66" width="60" height="5" rx="2" fill="#9590A6"/>
+      <rect x="220" y="57" width="46" height="14" rx="7" fill="#E6DEFF"/>
+    </g>
+  </g>
+  <g transform="translate(72,520)">
+    <rect width="240" height="60" rx="14" fill="#7C5CFF"/>
+    <text x="120" y="38" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Start Free →</text>
+    <text x="270" y="38" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" fill="#484555">studentflow.app</text>
+  </g>
+</svg>

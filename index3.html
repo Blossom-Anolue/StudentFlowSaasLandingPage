@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<!-- build-provenance
+  pipeline: /animated-website
+  generated-at: 2026-04-26T00:00:00Z
+  brief-source: brief.txt
+  mcp:
+    stitch: fired
+    firecrawl: fired
+    magic: fell-back
+  skills:
+    brand: fired
+    ui-ux-pro-max: fired
+    design-system: fired
+    design: fired
+    ui-styling: fired
+    nano-banana-2: skipped
+  images:
+    hero-dashboard: tier-3
+    product-preview: tier-3
+    workload-chart: tier-3
+    logo: tier-3
+    section-icons: tier-3
+    og-image: tier-3
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>StudentFlow — Stay organized. Stress less. Achieve more.</title>
+<meta name="description" content="A student planning platform for schedules, deadlines, study sessions, and smarter academic organization. Built for the way students actually work." />
+<meta name="theme-color" content="#7C5CFF" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="StudentFlow — Organize your academic life in one place" />
+<meta property="og:description" content="Schedules, assignments, study time, and deadlines — all in one student-first dashboard." />
+<meta property="og:image" content="og-image-3.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="StudentFlow — Organize your academic life in one place" />
+<meta name="twitter:description" content="Schedules, assignments, study time, and deadlines — all in one student-first dashboard." />
+<meta name="twitter:image" content="og-image-3.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#1B1B24',
+          'ink-muted': '#484555',
+          'ink-faint': '#9590A6',
+          surface: '#FFFFFF',
+          'surface-raised': '#FAF7FF',
+          'surface-tint': '#F0ECFA',
+          'surface-soft': '#F5F1FF',
+          border: '#E6DEFF',
+          primary: '#7C5CFF',
+          'primary-dark': '#5E39E0',
+          'primary-soft': '#E6DEFF',
+          secondary: '#E14B8A',
+          'secondary-soft': '#FFE0EC',
+          success: '#10B981',
+          warning: '#F59E0B'
+        },
+        fontFamily: {
+          display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          body: ['Inter', 'system-ui', 'sans-serif']
+        },
+        boxShadow: {
+          card: '0 1px 2px rgba(27,27,36,0.04), 0 8px 24px rgba(94,57,224,0.06)',
+          lift: '0 20px 50px rgba(94,57,224,0.18)',
+          ring: '0 0 0 1px rgba(124,92,255,0.15)'
+        }
+      }
+    }
+  };
+</script>
+<style>
+  :root {
+    --color-ink: #1B1B24;
+    --color-ink-muted: #484555;
+    --color-primary: #7C5CFF;
+    --color-primary-dark: #5E39E0;
+    --color-secondary: #E14B8A;
+    --color-surface: #FFFFFF;
+    --color-surface-soft: #F5F1FF;
+    --color-border: #E6DEFF;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-2xl: 28px;
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --dur-fast: 200ms;
+    --dur-mid: 420ms;
+    --dur-slow: 720ms;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--color-ink); background: var(--color-surface); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4, .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; letter-spacing: -0.025em; }
+  .grad-title { background: linear-gradient(96deg, #7C5CFF 0%, #5E39E0 60%, #E14B8A 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero-radial { background:
+    radial-gradient(1100px 520px at 78% -10%, rgba(124,92,255,0.16) 0%, rgba(124,92,255,0) 60%),
+    radial-gradient(800px 420px at 8% 20%, rgba(225,75,138,0.10) 0%, rgba(225,75,138,0) 60%); }
+  .ring-soft { box-shadow: 0 0 0 1px rgba(230,222,255,0.9), 0 24px 48px -16px rgba(94,57,224,0.18); }
+
+  /* reveal-on-scroll */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out); }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal-stagger > * { opacity: 0; transform: translateY(18px); transition: opacity var(--dur-mid) var(--ease-out), transform var(--dur-mid) var(--ease-out); }
+  .reveal-stagger.in > *:nth-child(1) { transition-delay: 0ms; }
+  .reveal-stagger.in > *:nth-child(2) { transition-delay: 80ms; }
+  .reveal-stagger.in > *:nth-child(3) { transition-delay: 160ms; }
+  .reveal-stagger.in > *:nth-child(4) { transition-delay: 240ms; }
+  .reveal-stagger.in > *:nth-child(5) { transition-delay: 320ms; }
+  .reveal-stagger.in > *:nth-child(6) { transition-delay: 400ms; }
+  .reveal-stagger.in > *:nth-child(7) { transition-delay: 480ms; }
+  .reveal-stagger.in > * { opacity: 0; }
+  .reveal-stagger.in > * { opacity: 1; transform: none; }
+
+  /* hero entrance */
+  @keyframes riseIn { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+  .anim-rise { animation: riseIn var(--dur-slow) var(--ease-out) both; }
+  .anim-rise-delay { animation: riseIn var(--dur-slow) var(--ease-out) 120ms both; }
+  .anim-rise-delay-2 { animation: riseIn var(--dur-slow) var(--ease-out) 240ms both; }
+  .anim-rise-delay-3 { animation: riseIn var(--dur-slow) var(--ease-out) 360ms both; }
+  .anim-fade { animation: fadeIn var(--dur-slow) var(--ease-out) both; }
+  .anim-float { animation: float 6s ease-in-out infinite; }
+
+  .lift { transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out); }
+  .lift:hover { transform: translateY(-4px); box-shadow: 0 24px 60px rgba(94,57,224,0.18); }
+  .btn-primary { background: linear-gradient(180deg, #8E70FF 0%, #7C5CFF 50%, #5E39E0 100%); color: #fff; box-shadow: 0 10px 24px rgba(94,57,224,0.30), inset 0 1px 0 rgba(255,255,255,0.3); transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out); }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 14px 30px rgba(94,57,224,0.36), inset 0 1px 0 rgba(255,255,255,0.3); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-ghost { color: var(--color-primary-dark); border: 1.5px solid var(--color-border); background: rgba(255,255,255,0.7); backdrop-filter: blur(8px); transition: border-color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out); }
+  .btn-ghost:hover { border-color: var(--color-primary); background: var(--color-surface-soft); }
+
+  /* dashboard mockup gentle parallax */
+  .tilt { transform: perspective(1200px) rotateX(0.6deg) rotateY(-1.2deg); }
+
+  /* FAQ */
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .faq-icon { transform: rotate(45deg); }
+  .faq-icon { transition: transform var(--dur-fast) var(--ease-out); }
+
+  /* testimonial slider */
+  .t-track { display: flex; gap: 24px; animation: slide 38s linear infinite; }
+  @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .t-marquee { mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); }
+  .t-marquee:hover .t-track { animation-play-state: paused; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-stagger > *, .anim-rise, .anim-rise-delay, .anim-rise-delay-2, .anim-rise-delay-3, .anim-fade, .anim-float { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; }
+    .t-track { animation: none !important; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body class="bg-surface text-ink">
+
+<!-- ============== NAV ============== -->
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-white/75 border-b border-border/50">
+  <nav aria-label="Primary" class="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2 font-display font-extrabold text-xl tracking-tight text-ink">
+      <span aria-hidden="true" class="grid place-items-center w-8 h-8 rounded-lg bg-primary text-white">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L20 6"/></svg>
+      </span>
+      StudentFlow
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-muted">
+      <a href="#features" class="hover:text-primary transition-colors">Features</a>
+      <a href="#how-it-works" class="hover:text-primary transition-colors">How it works</a>
+      <a href="#pricing" class="hover:text-primary transition-colors">Pricing</a>
+      <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="#" class="hidden sm:inline text-sm font-medium text-ink-muted hover:text-primary transition-colors">Sign in</a>
+      <a href="#cta" class="btn-primary text-sm font-semibold px-4 py-2 rounded-xl">Start Free</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ============== HERO ============== -->
+<main id="top">
+<section class="relative pt-28 lg:pt-32 pb-20 hero-radial overflow-hidden">
+  <div aria-hidden="true" class="absolute -top-32 -right-24 w-[28rem] h-[28rem] rounded-full bg-primary/10 blur-3xl"></div>
+  <div aria-hidden="true" class="absolute top-40 -left-20 w-[22rem] h-[22rem] rounded-full bg-secondary/10 blur-3xl"></div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <div class="lg:col-span-6">
+      <span class="anim-rise inline-flex items-center gap-2 rounded-full bg-primary-soft text-primary-dark text-xs font-semibold uppercase tracking-wider px-3 py-1.5 mb-6">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.9 4.6L18.5 8l-4.6 1.9L12 14.5l-1.9-4.6L5.5 8l4.6-1.4L12 2z"/></svg>
+        New · Spring 2026 release
+      </span>
+      <h1 class="anim-rise text-5xl md:text-6xl lg:text-[68px] font-extrabold leading-[1.05] tracking-tight">
+        Organize your <span class="grad-title">academic life</span> in one place.
+      </h1>
+      <p class="anim-rise-delay mt-6 text-lg md:text-xl text-ink-muted max-w-xl">
+        Manage schedules, assignments, study time, and deadlines with a student-first productivity platform.
+      </p>
+      <div class="anim-rise-delay-2 mt-8 flex flex-wrap items-center gap-4">
+        <a href="#cta" class="btn-primary px-7 py-4 rounded-xl font-bold text-base">Start Free</a>
+        <a href="#preview" class="btn-ghost px-7 py-4 rounded-xl font-bold text-base inline-flex items-center gap-2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          View Demo
+        </a>
+      </div>
+      <div class="anim-rise-delay-3 mt-8 flex items-center gap-4">
+        <div class="flex -space-x-2.5" aria-hidden="true">
+          <span class="w-9 h-9 rounded-full border-2 border-white bg-gradient-to-br from-[#FFD1E1] to-[#E14B8A]"></span>
+          <span class="w-9 h-9 rounded-full border-2 border-white bg-gradient-to-br from-[#C8B6FF] to-[#7C5CFF]"></span>
+          <span class="w-9 h-9 rounded-full border-2 border-white bg-gradient-to-br from-[#FFE6C2] to-[#F59E0B]"></span>
+          <span class="w-9 h-9 rounded-full border-2 border-white bg-gradient-to-br from-[#A7F3D0] to-[#10B981]"></span>
+        </div>
+        <p class="text-sm text-ink-muted">Joined by <span class="font-semibold text-ink">12,400+ students</span> this semester.</p>
+      </div>
+    </div>
+
+    <!-- Dashboard mockup (hand-authored Tier-3 SVG/HTML) -->
+    <div id="preview" class="lg:col-span-6 anim-fade">
+      <div class="tilt anim-float">
+        <div class="ring-soft rounded-3xl bg-surface-raised p-3 sm:p-4 border border-border/60">
+          <div class="rounded-2xl bg-white p-5 shadow-card">
+            <!-- top row -->
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 grid place-items-center rounded-xl bg-primary-soft text-primary-dark">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                </div>
+                <div>
+                  <p class="font-display font-bold text-sm">Weekly Overview</p>
+                  <p class="text-[11px] text-ink-faint">Apr 27 — May 3</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <button aria-label="Previous week" class="w-7 h-7 grid place-items-center rounded-lg bg-surface-tint hover:bg-primary-soft transition-colors text-ink-muted">‹</button>
+                <button aria-label="Next week" class="w-7 h-7 grid place-items-center rounded-lg bg-surface-tint hover:bg-primary-soft transition-colors text-ink-muted">›</button>
+              </div>
+            </div>
+            <!-- weekly grid -->
+            <div class="grid grid-cols-5 gap-2 mb-5" aria-hidden="true">
+              <div class="space-y-2">
+                <div class="text-[10px] font-semibold text-ink-faint">MON</div>
+                <div class="h-16 rounded-lg bg-primary-soft/70 border-l-4 border-primary px-2 py-1.5"><p class="text-[10px] font-bold text-primary-dark">Econ 101</p><p class="text-[9px] text-ink-muted">9:00</p></div>
+                <div class="h-10 rounded-lg bg-surface-tint"></div>
+              </div>
+              <div class="space-y-2 pt-5">
+                <div class="text-[10px] font-semibold text-ink-faint">TUE</div>
+                <div class="h-20 rounded-lg bg-secondary-soft border-l-4 border-secondary px-2 py-1.5"><p class="text-[10px] font-bold text-secondary">Creative Writing</p><p class="text-[9px] text-ink-muted">10:30</p></div>
+              </div>
+              <div class="space-y-2">
+                <div class="text-[10px] font-semibold text-ink-faint">WED</div>
+                <div class="h-12 rounded-lg bg-surface-tint"></div>
+                <div class="h-16 rounded-lg bg-[#FFF1DD] border-l-4 border-[#F59E0B] px-2 py-1.5"><p class="text-[10px] font-bold text-[#9C5B00]">Lab: Bio 2</p><p class="text-[9px] text-ink-muted">2:00</p></div>
+              </div>
+              <div class="space-y-2 pt-3">
+                <div class="text-[10px] font-semibold text-ink-faint">THU</div>
+                <div class="h-24 rounded-lg bg-primary-soft/70 border-l-4 border-primary px-2 py-1.5"><p class="text-[10px] font-bold text-primary-dark">Hist 400</p><p class="text-[9px] text-ink-muted">Seminar</p></div>
+              </div>
+              <div class="space-y-2">
+                <div class="text-[10px] font-semibold text-ink-faint">FRI</div>
+                <div class="h-8 rounded-lg bg-surface-tint"></div>
+                <div class="h-14 rounded-lg bg-[#DCFCE7] border-l-4 border-success px-2 py-1.5"><p class="text-[10px] font-bold text-[#065F46]">Study group</p><p class="text-[9px] text-ink-muted">4:00</p></div>
+              </div>
+            </div>
+            <!-- bottom panels -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-ink-faint">Top deadlines</p>
+                  <span class="text-[10px] font-semibold text-primary-dark">View all</span>
+                </div>
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-raised hover:bg-primary-soft/40 transition-colors">
+                    <div class="flex items-center gap-2.5">
+                      <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                      <div><p class="text-xs font-semibold">Research paper draft</p><p class="text-[10px] text-ink-faint">Sociology</p></div>
+                    </div>
+                    <span class="text-[10px] font-bold text-secondary bg-secondary-soft px-2 py-0.5 rounded-full">In 2 days</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-raised">
+                    <div class="flex items-center gap-2.5">
+                      <span class="w-2 h-2 rounded-full bg-primary"></span>
+                      <div><p class="text-xs font-semibold">Calculus problem set</p><p class="text-[10px] text-ink-faint">Math 220</p></div>
+                    </div>
+                    <span class="text-[10px] font-bold text-ink-muted bg-surface-tint px-2 py-0.5 rounded-full">In 4 days</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-raised">
+                    <div class="flex items-center gap-2.5">
+                      <span class="w-2 h-2 rounded-full bg-[#F59E0B]"></span>
+                      <div><p class="text-xs font-semibold">Lab report #4</p><p class="text-[10px] text-ink-faint">Biology</p></div>
+                    </div>
+                    <span class="text-[10px] font-bold text-ink-muted bg-surface-tint px-2 py-0.5 rounded-full">Next week</span>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-xl bg-surface-raised p-3 flex flex-col justify-between">
+                <p class="text-[10px] font-bold uppercase tracking-widest text-ink-faint">Workload distribution</p>
+                <svg viewBox="0 0 220 80" class="w-full h-20" role="img" aria-label="Bar chart of weekly workload, peaking on Wednesday">
+                  <g fill="#7C5CFF">
+                    <rect x="6"   y="48" width="22" height="24" rx="3" opacity="0.35"/>
+                    <rect x="42"  y="34" width="22" height="38" rx="3" opacity="0.55"/>
+                    <rect x="78"  y="14" width="22" height="58" rx="3" opacity="0.95"/>
+                    <rect x="114" y="28" width="22" height="44" rx="3" opacity="0.7"/>
+                    <rect x="150" y="40" width="22" height="32" rx="3" opacity="0.5"/>
+                    <rect x="186" y="52" width="22" height="20" rx="3" opacity="0.3"/>
+                  </g>
+                </svg>
+                <div class="flex items-center justify-between pt-2 border-t border-border/60 mt-1">
+                  <p class="text-[10px] text-ink-faint">Peak focus</p>
+                  <p class="text-[10px] font-bold text-primary-dark">Wednesday</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TRUST STRIP ============== -->
+<section aria-label="Trusted by students at" class="border-y border-border/60 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10 reveal">
+    <p class="text-center text-xs font-semibold uppercase tracking-widest text-ink-faint mb-6">Trusted by students at</p>
+    <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 items-center gap-y-6 gap-x-8 opacity-70">
+      <li class="text-center font-display font-extrabold tracking-tight text-ink-muted text-lg">NORTHWAY UNIV.</li>
+      <li class="text-center font-display font-bold italic text-ink-muted text-lg">Brookfield</li>
+      <li class="text-center font-display font-extrabold tracking-tight text-ink-muted text-lg">CEDAR <span class="text-primary">·</span> COLLEGE</li>
+      <li class="text-center font-display font-semibold text-ink-muted text-lg">Lakeside Tech</li>
+      <li class="text-center font-display font-extrabold tracking-tight text-ink-muted text-lg">RIVERSTONE</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============== PROBLEM / SOLUTION ============== -->
+<section class="py-24 bg-surface">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <div class="reveal">
+      <span class="inline-block px-3 py-1 rounded-full bg-secondary-soft text-secondary text-xs font-bold uppercase tracking-widest mb-4">The problem</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">Eight tabs, three apps, and still a missed deadline.</h2>
+      <p class="mt-5 text-lg text-ink-muted max-w-xl">Calendars in one place, notes in another, syllabi buried in your inbox. The system you're cobbling together is the reason work slips through.</p>
+      <ul class="mt-8 space-y-3 text-ink-muted">
+        <li class="flex items-start gap-3"><span class="mt-1 w-5 h-5 grid place-items-center rounded-full bg-secondary-soft text-secondary">×</span>Scattered tools, duplicated effort.</li>
+        <li class="flex items-start gap-3"><span class="mt-1 w-5 h-5 grid place-items-center rounded-full bg-secondary-soft text-secondary">×</span>Deadlines you find out about the night before.</li>
+        <li class="flex items-start gap-3"><span class="mt-1 w-5 h-5 grid place-items-center rounded-full bg-secondary-soft text-secondary">×</span>No clear view of the week ahead.</li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <span class="inline-block px-3 py-1 rounded-full bg-primary-soft text-primary-dark text-xs font-bold uppercase tracking-widest mb-4">The solution</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">One dashboard for student life.</h2>
+      <p class="mt-5 text-lg text-ink-muted max-w-xl">StudentFlow brings classes, assignments, study sessions, and reminders into a single, calm view — built for the way students actually plan.</p>
+      <ul class="mt-8 space-y-3 text-ink-muted">
+        <li class="flex items-start gap-3"><span class="mt-1 w-5 h-5 grid place-items-center rounded-full bg-primary-soft text-primary-dark">✓</span>Plan your semester in one place.</li>
+        <li class="flex items-start gap-3"><span class="mt-1 w-5 h-5 grid place-items-center rounded-full bg-primary-soft text-primary-dark">✓</span>Track deadlines with ease.</li>
+        <li class="flex items-start gap-3"><span class="mt-1 w-5 h-5 grid place-items-center rounded-full bg-primary-soft text-primary-dark">✓</span>Stay ahead of every assignment.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FEATURES ============== -->
+<section id="features" class="py-24 bg-surface-soft/50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <span class="inline-block px-3 py-1 rounded-full bg-primary-soft text-primary-dark text-xs font-bold uppercase tracking-widest mb-4">Everything in one dashboard</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">Built for the way students <span class="grad-title">actually</span> work.</h2>
+      <p class="mt-5 text-lg text-ink-muted">Smart scheduling, focused study, and shared planning — designed for clarity and calm.</p>
+    </div>
+    <div class="reveal-stagger reveal mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- 1 -->
+      <article class="lift bg-white rounded-2xl p-7 border border-border/60 shadow-card">
+        <div class="w-12 h-12 grid place-items-center rounded-xl bg-primary-soft text-primary-dark mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-bold mb-2">Smart schedule planner</h3>
+        <p class="text-ink-muted">Drop classes onto a weekly calendar in seconds — and rearrange without breaking your week.</p>
+      </article>
+      <!-- 2 -->
+      <article class="lift bg-white rounded-2xl p-7 border border-border/60 shadow-card">
+        <div class="w-12 h-12 grid place-items-center rounded-xl bg-primary-soft text-primary-dark mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-bold mb-2">Assignment &amp; deadline tracker</h3>
+        <p class="text-ink-muted">Never lose track of what's due. Centralized view across courses, with progress and priority.</p>
+      </article>
+      <!-- 3 -->
+      <article class="lift bg-white rounded-2xl p-7 border border-border/60 shadow-card">
+        <div class="w-12 h-12 grid place-items-center rounded-xl bg-primary-soft text-primary-dark mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 1h6"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-bold mb-2">Study session planning</h3>
+        <p class="text-ink-muted">Plan focused sessions with built-in timers, deep-work blocks, and a gentle break cadence.</p>
+      </article>
+      <!-- 4 -->
+      <article class="lift bg-white rounded-2xl p-7 border border-border/60 shadow-card">
+        <div class="w-12 h-12 grid place-items-center rounded-xl bg-primary-soft text-primary-dark mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-bold mb-2">Calendar integration</h3>
+        <p class="text-ink-muted">Two-way sync with Google, Outlook, and iCal — your schedule stays in one place.</p>
+      </article>
+      <!-- 5 -->
+      <article class="lift bg-white rounded-2xl p-7 border border-border/60 shadow-card">
+        <div class="w-12 h-12 grid place-items-center rounded-xl bg-primary-soft text-primary-dark mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-bold mb-2">Study group collaboration</h3>
+        <p class="text-ink-muted">Share notes, plan group sessions, and split tasks with classmates — without the chaos.</p>
+      </article>
+      <!-- 6 -->
+      <article class="lift bg-white rounded-2xl p-7 border border-border/60 shadow-card">
+        <div class="w-12 h-12 grid place-items-center rounded-xl bg-primary-soft text-primary-dark mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 00-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-bold mb-2">Reminder notifications</h3>
+        <p class="text-ink-muted">Smart reminders that nudge you before deadlines, not after — tuned to your study pace.</p>
+      </article>
+      <!-- 7 -->
+      <article class="lift bg-white rounded-2xl p-7 border border-border/60 shadow-card lg:col-start-2">
+        <div class="w-12 h-12 grid place-items-center rounded-xl bg-primary-soft text-primary-dark mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-bold mb-2">Workload overview</h3>
+        <p class="text-ink-muted">See your week at a glance, balance the load, and avoid burnout before it builds up.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PRODUCT PREVIEW ============== -->
+<section class="py-24 bg-surface">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <span class="inline-block px-3 py-1 rounded-full bg-secondary-soft text-secondary text-xs font-bold uppercase tracking-widest mb-4">Product preview</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">Your week, beautifully balanced.</h2>
+      <p class="mt-5 text-lg text-ink-muted">A calm, glanceable view of every class, deadline, and study block.</p>
+    </div>
+    <div class="mt-14 grid lg:grid-cols-3 gap-6 reveal-stagger reveal">
+      <!-- Calendar card -->
+      <div class="lift bg-surface-raised rounded-2xl p-6 border border-border/60 shadow-card">
+        <p class="text-xs font-bold uppercase tracking-widest text-ink-faint mb-4">Calendar cards</p>
+        <div class="space-y-3">
+          <div class="flex items-center justify-between bg-white rounded-xl p-3 border border-border/60">
+            <div class="flex items-center gap-3"><span class="w-1.5 h-10 rounded-full bg-primary"></span><div><p class="text-sm font-semibold">Econ 101</p><p class="text-xs text-ink-faint">Mon · 9:00 — 10:30</p></div></div>
+            <span class="text-xs font-medium text-ink-faint">Hall B</span>
+          </div>
+          <div class="flex items-center justify-between bg-white rounded-xl p-3 border border-border/60">
+            <div class="flex items-center gap-3"><span class="w-1.5 h-10 rounded-full bg-secondary"></span><div><p class="text-sm font-semibold">Creative writing</p><p class="text-xs text-ink-faint">Tue · 10:30 — 12:00</p></div></div>
+            <span class="text-xs font-medium text-ink-faint">Online</span>
+          </div>
+          <div class="flex items-center justify-between bg-white rounded-xl p-3 border border-border/60">
+            <div class="flex items-center gap-3"><span class="w-1.5 h-10 rounded-full bg-[#F59E0B]"></span><div><p class="text-sm font-semibold">Lab: Bio 2</p><p class="text-xs text-ink-faint">Wed · 14:00 — 16:00</p></div></div>
+            <span class="text-xs font-medium text-ink-faint">Bldg 4</span>
+          </div>
+        </div>
+      </div>
+      <!-- Assignment timeline -->
+      <div class="lift bg-surface-raised rounded-2xl p-6 border border-border/60 shadow-card">
+        <p class="text-xs font-bold uppercase tracking-widest text-ink-faint mb-4">Assignment timeline</p>
+        <ol class="relative pl-5">
+          <span aria-hidden="true" class="absolute left-1.5 top-1 bottom-1 w-px bg-border"></span>
+          <li class="relative pb-4"><span class="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-secondary ring-4 ring-secondary-soft"></span>
+            <p class="text-sm font-semibold">Research paper draft</p><p class="text-xs text-ink-faint">Due Wed · Sociology</p></li>
+          <li class="relative pb-4"><span class="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-primary-soft"></span>
+            <p class="text-sm font-semibold">Calculus problem set</p><p class="text-xs text-ink-faint">Due Fri · Math 220</p></li>
+          <li class="relative pb-4"><span class="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-[#F59E0B] ring-4 ring-[#FFF1DD]"></span>
+            <p class="text-sm font-semibold">Lab report #4</p><p class="text-xs text-ink-faint">Due next Tue · Biology</p></li>
+          <li class="relative"><span class="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-success ring-4 ring-[#DCFCE7]"></span>
+            <p class="text-sm font-semibold">Essay outline</p><p class="text-xs text-ink-faint">Submitted · History 400</p></li>
+        </ol>
+      </div>
+      <!-- Workload chart -->
+      <div class="lift bg-surface-raised rounded-2xl p-6 border border-border/60 shadow-card">
+        <p class="text-xs font-bold uppercase tracking-widest text-ink-faint mb-4">Weekly workload</p>
+        <svg viewBox="0 0 280 140" class="w-full h-36" role="img" aria-label="Weekly workload bar chart, peak Wednesday">
+          <g font-family="Inter, sans-serif" font-size="9" fill="#9590A6">
+            <text x="14" y="132" text-anchor="middle">M</text>
+            <text x="54" y="132" text-anchor="middle">T</text>
+            <text x="94" y="132" text-anchor="middle">W</text>
+            <text x="134" y="132" text-anchor="middle">T</text>
+            <text x="174" y="132" text-anchor="middle">F</text>
+            <text x="214" y="132" text-anchor="middle">S</text>
+            <text x="254" y="132" text-anchor="middle">S</text>
+          </g>
+          <g>
+            <rect x="6"   y="80"  width="16" height="36" rx="4" fill="#7C5CFF" opacity="0.35"/>
+            <rect x="46"  y="60"  width="16" height="56" rx="4" fill="#7C5CFF" opacity="0.55"/>
+            <rect x="86"  y="22"  width="16" height="94" rx="4" fill="#7C5CFF"/>
+            <rect x="126" y="48"  width="16" height="68" rx="4" fill="#7C5CFF" opacity="0.7"/>
+            <rect x="166" y="70"  width="16" height="46" rx="4" fill="#7C5CFF" opacity="0.5"/>
+            <rect x="206" y="92"  width="16" height="24" rx="4" fill="#E14B8A" opacity="0.4"/>
+            <rect x="246" y="100" width="16" height="16" rx="4" fill="#E14B8A" opacity="0.35"/>
+          </g>
+        </svg>
+        <div class="flex items-center justify-between pt-2 border-t border-border/60 mt-1">
+          <p class="text-xs text-ink-faint">Peak focus</p>
+          <p class="text-xs font-bold text-primary-dark">Wednesday</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HOW IT WORKS ============== -->
+<section id="how-it-works" class="py-24 bg-surface-soft/50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <span class="inline-block px-3 py-1 rounded-full bg-primary-soft text-primary-dark text-xs font-bold uppercase tracking-widest mb-4">How it works</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">Set up your semester in minutes.</h2>
+    </div>
+    <ol class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-stagger reveal">
+      <li class="lift bg-white rounded-2xl p-7 border border-border/60 shadow-card relative">
+        <span class="absolute -top-3 left-7 px-3 py-1 rounded-full bg-primary text-white text-[11px] font-bold tracking-widest">STEP 01</span>
+        <h3 class="mt-3 font-display text-lg font-bold">Add classes &amp; deadlines</h3>
+        <p class="mt-2 text-ink-muted">Import your syllabus or drop in classes one by one. We pre-fill the boring parts.</p>
+      </li>
+      <li class="lift bg-white rounded-2xl p-7 border border-border/60 shadow-card relative">
+        <span class="absolute -top-3 left-7 px-3 py-1 rounded-full bg-primary text-white text-[11px] font-bold tracking-widest">STEP 02</span>
+        <h3 class="mt-3 font-display text-lg font-bold">Build study plans</h3>
+        <p class="mt-2 text-ink-muted">Break big work into focused sessions, with timers and a calm break cadence.</p>
+      </li>
+      <li class="lift bg-white rounded-2xl p-7 border border-border/60 shadow-card relative">
+        <span class="absolute -top-3 left-7 px-3 py-1 rounded-full bg-primary text-white text-[11px] font-bold tracking-widest">STEP 03</span>
+        <h3 class="mt-3 font-display text-lg font-bold">Track progress</h3>
+        <p class="mt-2 text-ink-muted">A clear view of what's done, what's next, and how your week balances out.</p>
+      </li>
+      <li class="lift bg-white rounded-2xl p-7 border border-border/60 shadow-card relative">
+        <span class="absolute -top-3 left-7 px-3 py-1 rounded-full bg-primary text-white text-[11px] font-bold tracking-widest">STEP 04</span>
+        <h3 class="mt-3 font-display text-lg font-bold">Stay ahead</h3>
+        <p class="mt-2 text-ink-muted">Smart reminders, daily summaries, and a gentle nudge before anything slips.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============== TESTIMONIALS ============== -->
+<section class="py-24 bg-surface">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <span class="inline-block px-3 py-1 rounded-full bg-primary-soft text-primary-dark text-xs font-bold uppercase tracking-widest mb-4">Loved by students</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">"Finally, a planner that works the way I do."</h2>
+    </div>
+  </div>
+  <div class="t-marquee mt-14 overflow-hidden">
+    <div class="t-track px-6">
+      <!-- 6 cards x 2 = duplicate set -->
+      <figure class="min-w-[320px] max-w-sm bg-surface-raised rounded-2xl p-6 border border-border/60 shadow-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#7C5CFF" aria-hidden="true"><path d="M9 7H5a3 3 0 00-3 3v7h7V10H6c0-1 1-2 3-2zm10 0h-4a3 3 0 00-3 3v7h7V10h-3c0-1 1-2 3-2z"/></svg>
+        <blockquote class="mt-3 text-ink">StudentFlow replaced four apps and finally got my Mondays under control.</blockquote>
+        <figcaption class="mt-4 text-sm font-medium text-ink-muted">— Maya · Sociology, junior</figcaption>
+      </figure>
+      <figure class="min-w-[320px] max-w-sm bg-surface-raised rounded-2xl p-6 border border-border/60 shadow-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#7C5CFF" aria-hidden="true"><path d="M9 7H5a3 3 0 00-3 3v7h7V10H6c0-1 1-2 3-2zm10 0h-4a3 3 0 00-3 3v7h7V10h-3c0-1 1-2 3-2z"/></svg>
+        <blockquote class="mt-3 text-ink">The deadline tracker alone saved my GPA. The study group planner is a bonus.</blockquote>
+        <figcaption class="mt-4 text-sm font-medium text-ink-muted">— Daniel · CS, sophomore</figcaption>
+      </figure>
+      <figure class="min-w-[320px] max-w-sm bg-surface-raised rounded-2xl p-6 border border-border/60 shadow-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#7C5CFF" aria-hidden="true"><path d="M9 7H5a3 3 0 00-3 3v7h7V10H6c0-1 1-2 3-2zm10 0h-4a3 3 0 00-3 3v7h7V10h-3c0-1 1-2 3-2z"/></svg>
+        <blockquote class="mt-3 text-ink">It's the first app where the calendar feels like mine, not someone else's grid.</blockquote>
+        <figcaption class="mt-4 text-sm font-medium text-ink-muted">— Priya · Pre-med, senior</figcaption>
+      </figure>
+      <figure class="min-w-[320px] max-w-sm bg-surface-raised rounded-2xl p-6 border border-border/60 shadow-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#7C5CFF" aria-hidden="true"><path d="M9 7H5a3 3 0 00-3 3v7h7V10H6c0-1 1-2 3-2zm10 0h-4a3 3 0 00-3 3v7h7V10h-3c0-1 1-2 3-2z"/></svg>
+        <blockquote class="mt-3 text-ink">Workload view changed how I plan exam weeks. I actually sleep now.</blockquote>
+        <figcaption class="mt-4 text-sm font-medium text-ink-muted">— Lucas · Engineering, junior</figcaption>
+      </figure>
+      <figure class="min-w-[320px] max-w-sm bg-surface-raised rounded-2xl p-6 border border-border/60 shadow-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#7C5CFF" aria-hidden="true"><path d="M9 7H5a3 3 0 00-3 3v7h7V10H6c0-1 1-2 3-2zm10 0h-4a3 3 0 00-3 3v7h7V10h-3c0-1 1-2 3-2z"/></svg>
+        <blockquote class="mt-3 text-ink">Best part: it's calm. Nothing nags. It just keeps me honest.</blockquote>
+        <figcaption class="mt-4 text-sm font-medium text-ink-muted">— Ava · English lit, freshman</figcaption>
+      </figure>
+      <figure class="min-w-[320px] max-w-sm bg-surface-raised rounded-2xl p-6 border border-border/60 shadow-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#7C5CFF" aria-hidden="true"><path d="M9 7H5a3 3 0 00-3 3v7h7V10H6c0-1 1-2 3-2zm10 0h-4a3 3 0 00-3 3v7h7V10h-3c0-1 1-2 3-2z"/></svg>
+        <blockquote class="mt-3 text-ink">Our study group switched everything to StudentFlow in a week. We're not going back.</blockquote>
+        <figcaption class="mt-4 text-sm font-medium text-ink-muted">— Theo · Bio, junior</figcaption>
+      </figure>
+      <!-- duplicate set for marquee -->
+      <figure aria-hidden="true" class="min-w-[320px] max-w-sm bg-surface-raised rounded-2xl p-6 border border-border/60 shadow-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#7C5CFF"><path d="M9 7H5a3 3 0 00-3 3v7h7V10H6c0-1 1-2 3-2zm10 0h-4a3 3 0 00-3 3v7h7V10h-3c0-1 1-2 3-2z"/></svg>
+        <blockquote class="mt-3 text-ink">StudentFlow replaced four apps and finally got my Mondays under control.</blockquote>
+        <figcaption class="mt-4 text-sm font-medium text-ink-muted">— Maya · Sociology, junior</figcaption>
+      </figure>
+      <figure aria-hidden="true" class="min-w-[320px] max-w-sm bg-surface-raised rounded-2xl p-6 border border-border/60 shadow-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#7C5CFF"><path d="M9 7H5a3 3 0 00-3 3v7h7V10H6c0-1 1-2 3-2zm10 0h-4a3 3 0 00-3 3v7h7V10h-3c0-1 1-2 3-2z"/></svg>
+        <blockquote class="mt-3 text-ink">The deadline tracker alone saved my GPA. The study group planner is a bonus.</blockquote>
+        <figcaption class="mt-4 text-sm font-medium text-ink-muted">— Daniel · CS, sophomore</figcaption>
+      </figure>
+      <figure aria-hidden="true" class="min-w-[320px] max-w-sm bg-surface-raised rounded-2xl p-6 border border-border/60 shadow-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#7C5CFF"><path d="M9 7H5a3 3 0 00-3 3v7h7V10H6c0-1 1-2 3-2zm10 0h-4a3 3 0 00-3 3v7h7V10h-3c0-1 1-2 3-2z"/></svg>
+        <blockquote class="mt-3 text-ink">It's the first app where the calendar feels like mine, not someone else's grid.</blockquote>
+        <figcaption class="mt-4 text-sm font-medium text-ink-muted">— Priya · Pre-med, senior</figcaption>
+      </figure>
+      <figure aria-hidden="true" class="min-w-[320px] max-w-sm bg-surface-raised rounded-2xl p-6 border border-border/60 shadow-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#7C5CFF"><path d="M9 7H5a3 3 0 00-3 3v7h7V10H6c0-1 1-2 3-2zm10 0h-4a3 3 0 00-3 3v7h7V10h-3c0-1 1-2 3-2z"/></svg>
+        <blockquote class="mt-3 text-ink">Workload view changed how I plan exam weeks. I actually sleep now.</blockquote>
+        <figcaption class="mt-4 text-sm font-medium text-ink-muted">— Lucas · Engineering, junior</figcaption>
+      </figure>
+      <figure aria-hidden="true" class="min-w-[320px] max-w-sm bg-surface-raised rounded-2xl p-6 border border-border/60 shadow-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#7C5CFF"><path d="M9 7H5a3 3 0 00-3 3v7h7V10H6c0-1 1-2 3-2zm10 0h-4a3 3 0 00-3 3v7h7V10h-3c0-1 1-2 3-2z"/></svg>
+        <blockquote class="mt-3 text-ink">Best part: it's calm. Nothing nags. It just keeps me honest.</blockquote>
+        <figcaption class="mt-4 text-sm font-medium text-ink-muted">— Ava · English lit, freshman</figcaption>
+      </figure>
+      <figure aria-hidden="true" class="min-w-[320px] max-w-sm bg-surface-raised rounded-2xl p-6 border border-border/60 shadow-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#7C5CFF"><path d="M9 7H5a3 3 0 00-3 3v7h7V10H6c0-1 1-2 3-2zm10 0h-4a3 3 0 00-3 3v7h7V10h-3c0-1 1-2 3-2z"/></svg>
+        <blockquote class="mt-3 text-ink">Our study group switched everything to StudentFlow in a week. We're not going back.</blockquote>
+        <figcaption class="mt-4 text-sm font-medium text-ink-muted">— Theo · Bio, junior</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PRICING ============== -->
+<section id="pricing" class="py-24 bg-surface-soft/50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <span class="inline-block px-3 py-1 rounded-full bg-primary-soft text-primary-dark text-xs font-bold uppercase tracking-widest mb-4">Simple pricing</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">Pricing that works for student life.</h2>
+      <p class="mt-5 text-lg text-ink-muted">Start free. Upgrade when you need more.</p>
+    </div>
+    <div class="mt-14 grid lg:grid-cols-3 gap-6 lg:gap-8 items-stretch reveal-stagger reveal">
+      <!-- FREE -->
+      <article class="lift bg-white rounded-2xl p-8 border border-border/60 shadow-card flex flex-col">
+        <h3 class="font-display text-sm font-bold tracking-widest text-ink-faint">FREE</h3>
+        <p class="mt-1 text-ink-muted text-sm">For getting started.</p>
+        <p class="mt-6 flex items-baseline gap-1"><span class="font-display text-4xl font-extrabold">$0</span><span class="text-ink-faint">/mo</span></p>
+        <ul class="mt-6 space-y-3 text-ink-muted flex-grow">
+          <li class="flex items-center gap-3"><span class="w-5 h-5 grid place-items-center rounded-full bg-primary-soft text-primary-dark text-xs font-bold">✓</span>Up to 4 classes</li>
+          <li class="flex items-center gap-3"><span class="w-5 h-5 grid place-items-center rounded-full bg-primary-soft text-primary-dark text-xs font-bold">✓</span>Basic schedule planner</li>
+          <li class="flex items-center gap-3"><span class="w-5 h-5 grid place-items-center rounded-full bg-primary-soft text-primary-dark text-xs font-bold">✓</span>Deadline tracker</li>
+          <li class="flex items-center gap-3"><span class="w-5 h-5 grid place-items-center rounded-full bg-primary-soft text-primary-dark text-xs font-bold">✓</span>Email reminders</li>
+        </ul>
+        <a href="#cta" class="btn-ghost mt-8 py-3 px-5 rounded-xl font-bold text-center">Get started</a>
+      </article>
+      <!-- PRO STUDENT (highlighted) -->
+      <article class="relative lift rounded-2xl p-8 shadow-lift flex flex-col text-white" style="background: linear-gradient(160deg, #8E70FF 0%, #5E39E0 65%, #3F1FCB 100%);">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-lg">Recommended</span>
+        <h3 class="font-display text-sm font-bold tracking-widest text-white/85">PRO STUDENT</h3>
+        <p class="mt-1 text-white/80 text-sm">For full-time students.</p>
+        <p class="mt-6 flex items-baseline gap-1"><span class="font-display text-5xl font-extrabold">$4</span><span class="text-white/80">/mo</span></p>
+        <ul class="mt-6 space-y-3 flex-grow">
+          <li class="flex items-center gap-3"><span class="w-5 h-5 grid place-items-center rounded-full bg-white/20 text-white text-xs font-bold">✓</span>Unlimited classes</li>
+          <li class="flex items-center gap-3"><span class="w-5 h-5 grid place-items-center rounded-full bg-white/20 text-white text-xs font-bold">✓</span>Study session timer</li>
+          <li class="flex items-center gap-3"><span class="w-5 h-5 grid place-items-center rounded-full bg-white/20 text-white text-xs font-bold">✓</span>Calendar integration</li>
+          <li class="flex items-center gap-3"><span class="w-5 h-5 grid place-items-center rounded-full bg-white/20 text-white text-xs font-bold">✓</span>Push + SMS reminders</li>
+          <li class="flex items-center gap-3"><span class="w-5 h-5 grid place-items-center rounded-full bg-white/20 text-white text-xs font-bold">✓</span>Workload overview</li>
+          <li class="flex items-center gap-3"><span class="w-5 h-5 grid place-items-center rounded-full bg-white/20 text-white text-xs font-bold">✓</span>Study group sharing</li>
+        </ul>
+        <a href="#cta" class="mt-8 py-3 px-5 rounded-xl bg-white text-primary-dark font-bold text-center hover:bg-surface-soft transition-colors">Start free trial</a>
+      </article>
+      <!-- CAMPUS -->
+      <article class="lift bg-white rounded-2xl p-8 border border-border/60 shadow-card flex flex-col">
+        <h3 class="font-display text-sm font-bold tracking-widest text-ink-faint">CAMPUS</h3>
+        <p class="mt-1 text-ink-muted text-sm">For student orgs &amp; study groups.</p>
+        <p class="mt-6 flex items-baseline gap-1"><span class="font-display text-4xl font-extrabold">$39</span><span class="text-ink-faint">/mo</span></p>
+        <ul class="mt-6 space-y-3 text-ink-muted flex-grow">
+          <li class="flex items-center gap-3"><span class="w-5 h-5 grid place-items-center rounded-full bg-primary-soft text-primary-dark text-xs font-bold">✓</span><span class="font-semibold text-ink">Everything in Pro</span></li>
+          <li class="flex items-center gap-3"><span class="w-5 h-5 grid place-items-center rounded-full bg-primary-soft text-primary-dark text-xs font-bold">✓</span>Up to 25 members</li>
+          <li class="flex items-center gap-3"><span class="w-5 h-5 grid place-items-center rounded-full bg-primary-soft text-primary-dark text-xs font-bold">✓</span>Shared schedules</li>
+          <li class="flex items-center gap-3"><span class="w-5 h-5 grid place-items-center rounded-full bg-primary-soft text-primary-dark text-xs font-bold">✓</span>Group study planning</li>
+          <li class="flex items-center gap-3"><span class="w-5 h-5 grid place-items-center rounded-full bg-primary-soft text-primary-dark text-xs font-bold">✓</span>Priority support</li>
+        </ul>
+        <a href="#cta" class="btn-ghost mt-8 py-3 px-5 rounded-xl font-bold text-center">Talk to us</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section id="faq" class="py-24 bg-surface">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <div class="text-center reveal">
+      <span class="inline-block px-3 py-1 rounded-full bg-primary-soft text-primary-dark text-xs font-bold uppercase tracking-widest mb-4">FAQ</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">Quick answers.</h2>
+    </div>
+    <div class="mt-12 space-y-3 reveal-stagger reveal">
+      <details class="group bg-surface-raised rounded-2xl p-5 border border-border/60">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-semibold text-ink">Can I import my class schedule from my school?</span>
+          <span aria-hidden="true" class="faq-icon text-2xl text-primary-dark leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-ink-muted">Yes — paste your syllabus or connect Google/Outlook calendar. We'll map classes, deadlines, and recurring sessions automatically.</p>
+      </details>
+      <details class="group bg-surface-raised rounded-2xl p-5 border border-border/60">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-semibold text-ink">How do reminders work?</span>
+          <span aria-hidden="true" class="faq-icon text-2xl text-primary-dark leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-ink-muted">Smart reminders adapt to your study pace. Get a daily preview, plus nudges 24 and 2 hours before deadlines via email, push, or SMS on Pro.</p>
+      </details>
+      <details class="group bg-surface-raised rounded-2xl p-5 border border-border/60">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-semibold text-ink">Which calendars and tools integrate?</span>
+          <span aria-hidden="true" class="faq-icon text-2xl text-primary-dark leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-ink-muted">Two-way sync with Google Calendar, Outlook, and iCal. One-click export to Notion, plus webhooks for power users.</p>
+      </details>
+      <details class="group bg-surface-raised rounded-2xl p-5 border border-border/60">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-semibold text-ink">Is there a student discount?</span>
+          <span aria-hidden="true" class="faq-icon text-2xl text-primary-dark leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-ink-muted">Pro is already $4/mo for any student. Verified university unions can claim 50% off Campus plans through our partner program.</p>
+      </details>
+      <details class="group bg-surface-raised rounded-2xl p-5 border border-border/60">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-semibold text-ink">Can I cancel anytime?</span>
+          <span aria-hidden="true" class="faq-icon text-2xl text-primary-dark leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-ink-muted">Yes. Cancel from settings — no calls, no friction. Your data exports cleanly as CSV or ICS.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FINAL CTA ============== -->
+<section id="cta" class="py-20">
+  <div class="max-w-5xl mx-auto px-6 lg:px-8">
+    <div class="relative overflow-hidden rounded-3xl p-10 md:p-16 text-center text-white reveal" style="background: radial-gradient(120% 140% at 0% 0%, #8E70FF 0%, #5E39E0 55%, #3F1FCB 100%);">
+      <div aria-hidden="true" class="absolute -top-12 -right-10 w-72 h-72 rounded-full bg-secondary/30 blur-3xl"></div>
+      <div aria-hidden="true" class="absolute -bottom-16 -left-10 w-72 h-72 rounded-full bg-white/15 blur-3xl"></div>
+      <h2 class="relative font-display text-3xl md:text-5xl font-extrabold tracking-tight">Stay organized. Stress less. Achieve more.</h2>
+      <p class="relative mt-4 text-white/85 text-lg max-w-2xl mx-auto">Start free today — no credit card required. Set up your semester in under five minutes.</p>
+      <div class="relative mt-8 flex flex-wrap justify-center gap-3">
+        <a href="#" class="px-7 py-4 rounded-xl bg-white text-primary-dark font-bold hover:bg-surface-soft transition-colors">Start Free</a>
+        <a href="#" class="px-7 py-4 rounded-xl border border-white/40 text-white font-bold hover:bg-white/10 transition-colors">View Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============== FOOTER ============== -->
+<footer class="bg-surface-soft/60 border-t border-border/60">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
+    <div class="lg:col-span-2">
+      <a href="#top" class="flex items-center gap-2 font-display font-extrabold text-xl tracking-tight text-ink">
+        <span aria-hidden="true" class="grid place-items-center w-8 h-8 rounded-lg bg-primary text-white">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L20 6"/></svg>
+        </span>
+        StudentFlow
+      </a>
+      <p class="mt-3 text-sm text-ink-muted max-w-xs">A student planning platform for schedules, deadlines, study sessions, and smarter academic organization.</p>
+    </div>
+    <div>
+      <p class="font-display text-xs font-bold uppercase tracking-widest text-ink-faint mb-3">Product</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#features" class="text-ink-muted hover:text-primary transition-colors">Features</a></li>
+        <li><a href="#pricing" class="text-ink-muted hover:text-primary transition-colors">Pricing</a></li>
+        <li><a href="#how-it-works" class="text-ink-muted hover:text-primary transition-colors">How it works</a></li>
+        <li><a href="#faq" class="text-ink-muted hover:text-primary transition-colors">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-display text-xs font-bold uppercase tracking-widest text-ink-faint mb-3">Company</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="text-ink-muted hover:text-primary transition-colors">About</a></li>
+        <li><a href="#" class="text-ink-muted hover:text-primary transition-colors">Careers</a></li>
+        <li><a href="#" class="text-ink-muted hover:text-primary transition-colors">Contact</a></li>
+        <li><a href="#" class="text-ink-muted hover:text-primary transition-colors">Privacy</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-display text-xs font-bold uppercase tracking-widest text-ink-faint mb-3">Social</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="text-ink-muted hover:text-primary transition-colors">Twitter / X</a></li>
+        <li><a href="#" class="text-ink-muted hover:text-primary transition-colors">Instagram</a></li>
+        <li><a href="#" class="text-ink-muted hover:text-primary transition-colors">TikTok</a></li>
+        <li><a href="#" class="text-ink-muted hover:text-primary transition-colors">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-border/60">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-ink-faint">
+      <p>© 2026 StudentFlow. All rights reserved.</p>
+      <p>Made for students, with care.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll-reveal — IntersectionObserver, prefers-reduced-motion safe
+  (function () {
+    if (typeof IntersectionObserver === 'undefined') return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function (n) { io.observe(n); });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+{
+  "pipeline": "/animated-website",
+  "generatedAt": "2026-04-26T00:00:00Z",
+  "briefSource": "brief.txt",
+  "site": "StudentFlow",
+  "outputFile": "index3.html",
+  "ogImage": "og-image-3.svg",
+  "mcp": {
+    "stitch": "fired",
+    "firecrawl": "fired",
+    "magic": "fell-back"
+  },
+  "skills": {
+    "brand": "fired",
+    "ui-ux-pro-max": "fired",
+    "design-system": "fired",
+    "design": "fired",
+    "ui-styling": "fired",
+    "nano-banana-2": "skipped"
+  },
+  "images": {
+    "hero-dashboard": "tier-3",
+    "product-preview": "tier-3",
+    "workload-chart": "tier-3",
+    "logo": "tier-3",
+    "section-icons": "tier-3",
+    "og-image": "tier-3"
+  },
+  "stitch": {
+    "projectId": "7151359347493018152",
+    "screens": {
+      "hero": "d01e80ded7a5405b8986e1dc2cbd8d47",
+      "features": "dd39884b0333415ea65bc53c4e10b437",
+      "pricing": "60235d82bc4e4cb48395ea2b03c9afb0"
+    }
+  },
+  "tokens": {
+    "primary": "#7C5CFF",
+    "primary-dark": "#5E39E0",
+    "secondary": "#E14B8A",
+    "accent": "#F5F1FF",
+    "surface": "#FFFFFF",
+    "surface-raised": "#FAF7FF",
+    "ink": "#1B1B24",
+    "ink-muted": "#484555",
+    "border": "#E6DEFF",
+    "fontDisplay": "Plus Jakarta Sans",
+    "fontBody": "Inter",
+    "radius": { "md": 12, "lg": 16, "xl": 20, "2xl": 28 }
+  },
+  "sections": [
+    "Hero",
+    "Trust strip",
+    "Problem / Solution",
+    "Features",
+    "Product preview",
+    "How it works",
+    "Testimonials (marquee)",
+    "Pricing",
+    "FAQ",
+    "Final CTA",
+    "Footer"
+  ],
+  "voice": {
+    "archetype": "Clear Guide + Productive Mentor",
+    "tagline": "Stay organized. Stress less. Achieve more."
+  },
+  "reference": {
+    "url": "https://www.hisawyer.com/for-business",
+    "borrowed": ["trust strip", "alternating image+benefit blocks", "feature card grid", "testimonial marquee", "multi-column footer"],
+    "avoided": ["children-activity vocabulary", "industry-categories grid"]
+  }
+}
